@@ -2,6 +2,8 @@
 
 Advertisements for the sale and lease of real estate [http://offers.kiev.ua](http://offers.kiev.ua). Make the real estate market better.
 
+[Errbit (error catcher)](https://blooming-harbor-4061.herokuapp.com)
+
 ## Ruby version
 
 Production server ruby version is `2.0.0`.

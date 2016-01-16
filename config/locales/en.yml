@@ -1,0 +1,30 @@
+en:
+  articles:
+    index:
+      title: 'Articles'
+    show:
+      original: 'Original article (%{language})'
+      source: 'Source'
+      translation: 'Translation (%{language})'
+    search:
+      placeholder: 'search articles'
+    recent:
+      header: 'Recent Articles'
+  offers:
+    index:
+      title: 'Offers'
+    search:
+      placeholder: 'search offers'
+    form:
+      placeholders:
+        first_select_region: 'first select a region'
+        first_select_district: 'first select a city'
+      contact_and_price: 'Contact and price'
+  support:
+    index:
+      title: 'Support'
+  layouts:
+    application:
+      mailo_technical_support_html: "Technical support: <a href='mailto:Technical support<shhavel@gmail.com>'>shhavel@gmail.com</a>"
+  m2_html: 'm<sup>2</sup>'
+  sq_m: 'sq. m'

@@ -1,0 +1,30 @@
+uk:
+  articles:
+    index:
+      title: 'Статті'
+    show:
+      original: 'Оригінал статті (%{language})'
+      source: 'Джерело'
+      translation: 'Переклад (%{language})'
+    search:
+      placeholder: 'пошук статей'
+    recent:
+      header: 'Недавні статті'
+  offers:
+    index:
+      title: 'Оголошення'
+    search:
+      placeholder: 'пошук оголошень'
+    form:
+      placeholders:
+        first_select_region: 'спочатку виберіть область'
+        first_select_district: 'спочатку виберіть місто'
+      contact_and_price: 'Контактна інформація та ціна'
+  support:
+    index:
+      title: 'Підтримка'
+  layouts:
+    application:
+      mailo_technical_support_html: "Технічна підтримка: <a href='mailto:Технічна підтримка<shhavel@gmail.com>'>shhavel@gmail.com</a>"
+  m2_html: 'м<sup>2</sup>'
+  sq_m: 'кв. м'

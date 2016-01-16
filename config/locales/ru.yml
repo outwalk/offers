@@ -1,0 +1,34 @@
+ru:
+  articles:
+    index:
+      title: 'Статьи'
+    show:
+      original: 'Оригинал статьи (%{language})'
+      source: 'Источник'
+      translation: 'Перевод (%{language})'
+    search:
+      placeholder: 'поиск статей'
+    recent:
+      header: 'Недавние статьи'
+  offers:
+    index:
+      title: 'Объявления'
+    search:
+      placeholder: 'поиск объявлений'
+    form:
+      placeholders:
+        first_select_region: 'сначала выберите область'
+        first_select_district: 'сначала выберите город'
+      contact_and_price: 'Контактная информация и цена'
+  support:
+    index:
+      title: 'Поддержка'
+  layouts:
+    application:
+      mailo_technical_support_html: "Техническая поддержка: <a href='mailto:Техническая поддержка<shhavel@gmail.com>'>shhavel@gmail.com</a>"
+  m2_html: 'м<sup>2</sup>'
+  sq_m: 'кв. м'
+  activerecord:
+    errors:
+      messages:
+        present: 'должно быть пустым'

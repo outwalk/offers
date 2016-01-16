@@ -1,0 +1,18 @@
+<tr>
+  <td>
+    <div style="float: right;">
+      <span class="label label-success label-as-badge" style="font-size: 1em;">
+        <%= number_to_currency(offer.price, unit: offer.price_currency) %>
+      </span>
+    </div>
+    <h3 style="display: inline; font-size: 1.4em;">
+      <%= link_to offer.title, offer_path(offer) %>
+    </h3>
+    <p>
+      <i><%= "#{offer.region.name}, #{offer.locality.name} #{areas_list(offer)}, #{floors_list(offer)}" %></i>
+    </p>
+    <p>
+      <%= simple_format truncate(offer.description.to_s.mb_chars.downcase.strip.normalize.capitalize, length: 260) %>
+    </p>
+  </td>
+</tr>

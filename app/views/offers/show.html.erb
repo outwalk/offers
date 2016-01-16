@@ -1,0 +1,215 @@
+<%- model_class = Offer -%>
+<div class="page-header">
+  <h1><%=t '.title', default: model_class.model_name.human.titleize %></h1>
+</div>
+
+<div class="fieldset">
+  <dl>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:offer_type) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.offer_type %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:property_type) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.property_type %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:category) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.category %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:region_id) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.region_id %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:district_id) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.district_id %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:locality_id) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.locality_id %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:address) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.address %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:direction) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.direction %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:distance) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.distance %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:latitude) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.latitude %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:longitude) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.longitude %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:metro_time_on_transport) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.metro_time_on_transport %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:metro_time_on_foot) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.metro_time_on_foot %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:railway_station) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.railway_station %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:renovation) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.renovation %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:quality) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.quality %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:title_uk) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.title_uk %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:title_ru) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.title_ru %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:title_en) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.title_en %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:description) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.description %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:description_uk) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.description_uk %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:description_ru) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.description_ru %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:description_en) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.description_en %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:area) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.area %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:living_space) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.living_space %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:rooms_spaces) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.rooms_spaces %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:kitchen_space) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.kitchen_space %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:area_unit) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.area_unit %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:lot_area) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.lot_area %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:lot_type) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.lot_type %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:new_flat) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.new_flat %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:rooms) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.rooms %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:rooms_offered) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.rooms_offered %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:open_plan) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.open_plan %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:rooms_type) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.rooms_type %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:phone) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.phone %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:internet) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.internet %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:room_furniture) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.room_furniture %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:kitchen_furniture) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.kitchen_furniture %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:television) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.television %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:washing_machine) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.washing_machine %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:refrigerator) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.refrigerator %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:balcony) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.balcony %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:bathroom_unit) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.bathroom_unit %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:floor_covering) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.floor_covering %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:window_view) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.window_view %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:floor) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.floor %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:floors_total) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.floors_total %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:building_name) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.building_name %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:building_type) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.building_type %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:building_series) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.building_series %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:building_phase) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.building_phase %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:building_section) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.building_section %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:building_state) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.building_state %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:built_year) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.built_year %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:ready_quarter) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.ready_quarter %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:lift) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.lift %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:rubbish_chute) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.rubbish_chute %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:is_elite) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.is_elite %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:parking) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.parking %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:alarm) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.alarm %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:ceiling_height) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.ceiling_height %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:pmg) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.pmg %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:toilet) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.toilet %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:shower) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.shower %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:kitchen) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.kitchen %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:pool) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.pool %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:billiard) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.billiard %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:sauna) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.sauna %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:heating_supply) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.heating_supply %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:water_supply) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.water_supply %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:sewerage_supply) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.sewerage_supply %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:electricity_supply) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.electricity_supply %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:gas_supply) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.gas_supply %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:price) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.price %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:price_currency) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.price_currency %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:price_period) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.price_period %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:price_unit) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.price_unit %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:not_for_agents) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.not_for_agents %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:haggle) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.haggle %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:mortgage) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.mortgage %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:prepayment) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.prepayment %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:rent_pledge) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.rent_pledge %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:agent_fee) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.agent_fee %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:no_agent_fee) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.no_agent_fee %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:deal_status) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.deal_status %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:with_pets) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.with_pets %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:with_children) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.with_children %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:manually_added) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.manually_added %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:expires_at) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.expires_at %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:user_id) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.user_id %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:user_name) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.user_name %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:phone_first) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.phone_first %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:phone_second) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.phone_second %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:phone_third) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.phone_third %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:phone_fourth) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.phone_fourth %></pre></dd>
+    <dt class="label label-default"><%= model_class.human_attribute_name(:user_email) %></dt>
+    <dd><pre class="prettyprint"><%= @offer.user_email %></pre></dd>
+  </dl>
+</div>
+
+<div class="form-group">
+  <%= link_to t('.back', default: t("helpers.links.back")),
+              offers_path, class: 'btn btn-default'  %>
+  <%= link_to t('.edit', default: t("helpers.links.edit")),
+              edit_offer_path(@offer), class: 'btn btn-default' %>
+  <%= link_to t('.destroy', default: t("helpers.links.destroy")),
+              offer_path(@offer),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', default: t("helpers.links.confirm", default: 'Are you sure?')) },
+              class: 'btn btn-danger' %>
+</div>

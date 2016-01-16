@@ -1,0 +1,10 @@
+<% if @articles.any? %>
+  <ul>
+    <% @articles.each do |artcile| %>
+      <li><%= link_to artcile.title, article_url(artcile, locale: artcile.language) %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<br/>
+Total: <%= @articles.count %>

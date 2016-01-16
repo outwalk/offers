@@ -1,0 +1,51 @@
+en:
+  offer:
+    section:
+      offer: 'Offer'
+      location: 'Location'
+      address: 'Address'
+    type:
+      sale: 'for sale'
+      rent: 'rent'
+    category:
+      flat: 'flat'
+      room: 'room'
+      house: 'house'
+      cottage: 'cottage'
+      townhouse: 'townhouse'
+      part_of_the_house: 'part of the house'
+      house_with_lot: 'house with lot'
+      country_house: 'country house'
+      lot: 'lot'
+      office: 'office'
+      garage: 'garage'
+    lot_type:
+      individual_house_building: 'individual house building'
+      gardening: 'gardening'
+    area_unit:
+      a: 'ares'
+      ha: 'hectares'
+    building_type:
+      brick: 'brick'
+      silicate_brick: 'lime brick'
+      monolith: 'monolith'
+      panel: 'panel'
+      foam_block: 'foam block'
+      coquina: 'coquina'
+      monolith_brick: 'monolith brick'
+      monolith_block: 'monolithic block'
+      wood_and_brick: 'wood and brick'
+      inkerman_stone: 'Inkerman stone'
+      skeleton: 'skeleton'
+      timber: 'timber'
+      metal: 'metal'
+    bathroom_unit:
+      combined: 'combined'
+      separate: 'separate'
+    floor: 'floor'
+    floors_total: 'number of storeys'
+    price_currency:
+      USD: '$'
+      UAH: 'UAH'
+      EUR: '€'
+      GBP: '£'

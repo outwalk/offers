@@ -1,0 +1,18 @@
+<%= render_breadcrumbs do |breadcrumbs| %>
+  <%= content_tag(:div, breadcrumbs, class: "container") %>
+<% end %>
+
+<%= render 'search' %>
+<%= render 'recent' %>
+
+<%- model_class = Article -%>
+
+<div class="page-header">
+  <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+
+<%= render @articles %>
+
+<div style="float:right;">
+  <%= paginate @articles, theme: 'twitter-bootstrap-3' %>
+</div>

@@ -1,0 +1,23 @@
+ru:
+  helpers:
+    actions: "Действия"
+    links:
+      back: "Назад"
+      cancel: "Отменить"
+      confirm: "Вы уверены?"
+      destroy: "Удалить"
+      new: "Новый"
+      edit: "Редактировать"
+      show: "Показать"
+    titles:
+      edit: "Редактировать"
+      save: "Сохранить"
+      new: "Новый"
+      delete: "Удалить"
+  views:
+    pagination:
+      first: 'Первая'
+      previous: 'Предыдущая'
+      truncate: '...'
+      next: 'Следующая'
+      last: 'Последняя'

@@ -1,0 +1,1 @@
+$('#offer_locality_id').html('<%==j options_for_locality_select(params[:district_id]) %>').data("placeholder", "<%== Offer.human_attribute_name('locality_id') %>").select2({theme: "bootstrap"});

@@ -1,0 +1,84 @@
+ru:
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Выслать повторно письмо с активацией"
+    mailer:
+      confirmation_instructions:
+        action: "Активировать"
+        greeting: "Привет %{recipient}!"
+        instruction: "Вы можете активировать свою учетную запись, нажав ссылку снизу:"
+      reset_password_instructions:
+        action: "Изменить пароль"
+        greeting: "Добро пожаловать, %{recipient}!"
+        instruction: "Вы (или кто-то еще) запросили изменение пароля. Для изменение пароля нажимите ссылку ниже:"
+        instruction_2: "Если вы не запрашивали изменение пароля - проигнорируйте, пожалуйста, это сообщение."
+        instruction_3: "Ваш пароль не изменится пока вы не нажмете на ссылку и не введете новый."
+      unlock_instructions:
+        action: "Разблокировать учетную запись"
+        greeting: "Здравствуйте, %{recipient}!"
+        instruction: "Нажмите ссылку для активации учетной записи:"
+        message: "Ваша учетная запись была заблокирована в связи с превышением лимита неудачных попыток входа."
+    passwords:
+      new:
+        forgot_your_password: "Забыли пароль?"
+        send_me_reset_password_instructions: "Выслать новый пароль"
+      edit:
+        change_my_password: "Изменить мой пароль"
+        change_your_password: "Изменить пароль"
+        confirm_new_password: "Повторите новый пароль"
+        new_password: "Новый пароль"
+    registrations:
+      edit:
+        are_you_sure: "Вы уверены?"
+        cancel_my_account: "Удалить учетную запись"
+        leave_blank_if_you_don_t_want_to_change_it: "оставьте поле пустым, если не хотите ничего менять"
+        currently_waiting_confirmation_for_email: "Ожидается подтверждение адреса E-mail: %{email}"
+        title: "Редактировать учетную запись"
+        we_need_your_current_password_to_confirm_your_changes: "введите текущий пароль для подтверждения изменений"
+        update: "Обновить"
+        unhappy: "Разочарованы"
+      new:
+        sign_up: "Регистрация"
+        i_accept: "Я принимаю"
+    sessions:
+      new:
+        sign_in: "Войти"
+      current:
+        edit_registration: "Учетная запись"
+        sign_out: "Выйти"
+    shared:
+      links:
+        back: "Назад"
+        didn_t_receive_confirmation_instructions: "Не получили подтверждение?"
+        didn_t_receive_unlock_instructions: "Не получили код разблокировки?"
+        forgot_your_password: "Забыли пароль?"
+        sign_in: "Войти"
+        sign_in_with_provider: "Войти с помощью %{provider}"
+        sign_up: "Регистрация"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Выслать подтверждение заново"
+  activerecord:
+    models:
+      user:
+        one: "Пользователь"
+        few: "Пользователи"
+        many: "Пользователи"
+        other: "Пользователи"
+    attributes:
+      user:
+        current_password: "Текущий пароль"
+        email:
+        password: "Пароль"
+        password_confirmation: "Подтверждение пароля"
+        remember_me: "Запомнить меня"
+        name: "Имя и фамилия"
+        phone_first: "Первый номер телефона"
+        phone_second: "Второй номер телефона"
+        phone_third: "Третий номер телефона"
+        phone_fourth: "Четвертый номер телефона"
+        terms_of_service: "Условия пользования сервисом"
+        subscribed: "Разрешить Email уведомления"
+        slogan: "Слоган (информационный текст добавляемый ко всем объявлениям)"
+        confirmed_at: "Email подтвержден"

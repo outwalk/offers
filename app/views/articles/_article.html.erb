@@ -1,0 +1,13 @@
+<h3>
+  <%= link_to article.title, article %>
+</h3>
+<p>
+  <% if params[:q] %>
+    <%== highlight(article.intro, params[:q]) %>
+  <% else %>
+    <%== article.intro %>
+  <% end %>
+</p>
+<div style="float:right;">
+  <%= I18n.localize(article.written_on, format: :long) %>
+</div>

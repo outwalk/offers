@@ -1,0 +1,41 @@
+<%= render_breadcrumbs do |breadcrumbs| %>
+  <%= content_tag(:div, breadcrumbs, class: "container") %>
+<% end %>
+
+<%= render 'search' %>
+<%= render 'recent' %>
+
+<h1 class="title">
+  <%= @article.title %>
+</h1>
+<% @article.images.each do |image_url| %>
+  <%= image_tag image_url, class: 'img-responsive img-rounded picture', slyle: 'float: left;' %>
+<% end %>
+
+<%= @article.body.html_safe %>
+
+<% if @article.author %>
+  <div style="float:right;">
+    <i><%= @article.author %></i>
+  </div>
+<% end %>
+
+<p>
+  <br/>
+  <i><%= I18n.localize(@article.written_on, format: :long) %></i>
+
+  <% @article.translations.each do |translation| %>
+    <br/>
+    <i><%= t('.translation', language: LANGUAGES.rassoc(translation.language).first) %>:
+    <%= link_to translation.title, article_path(translation, locale: translation.language) %></i>
+  <% end %>
+
+  <br/>
+  <% if @article.origin %>
+    <i><%= t('.original', language: LANGUAGES.rassoc(@article.origin.language).first) %>:
+    <%= link_to @article.origin.title, article_path(@article.origin, locale: @article.origin.language) %></i>
+  <% elsif @article.source %>
+    <i><%= t('.source') %>:
+    <%= link_to @article.source_url, @article.source_url, target: '_blank' %></i>
+  <% end %>
+</p>

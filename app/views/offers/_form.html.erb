@@ -1,0 +1,216 @@
+<%= form_for @offer, html: { class: 'form-horizontal' } do |f| %>
+  <div class="form-group">
+    <%= f.label :offer_type, t('offer.section.offer'), class: 'control-label col-md-4' %>
+    <div class="col-md-2">
+      <%= f.select :offer_type, Offer::TYPES.map { |type| [t("offer.type.#{type}"), type] }, { prompt: '' }, data: { placeholder: Offer.human_attribute_name('offer_type') }, style: 'width:120px;' %>
+    </div>
+    <div class="col-md-4">
+    <%= f.select :category, Offer::CATEGORIES.map { |c| [t("offer.category.#{c}"), c] }, { prompt: '' }, data: { placeholder: Offer.human_attribute_name('category') } %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :region_id, t('offer.section.location'), class: 'control-label col-md-4' %>
+    <div class="col-md-2">
+    <%= f.select :region_id, options_from_collection_for_select(Region.order(:"name_#{I18n.locale}"), 'id', 'name', selected: f.object.region_id), { prompt: '' }, data: { placeholder: Offer.human_attribute_name('region_id') }, autocomplete: 'off', style: 'width:140px' %>
+    </div>
+    <div class="col-md-3">
+      <%= f.select :district_id, options_for_district_select(f.object.region_id, f.object.district_id), { prompt: '' }, data: { placeholder: (f.object.region_id ? Offer.human_attribute_name('district_id') : t('offers.form.placeholders.first_select_region')) }, autocomplete: 'off', style: 'width:190px' %>
+    </div>
+    <div class="col-md-3">
+      <%= f.select :locality_id, options_for_locality_select(f.object.district_id, f.object.locality_id), { prompt: '' }, data: { placeholder: (f.object.district_id ? Offer.human_attribute_name('locality_id') :  t('offers.form.placeholders.first_select_district')) }, autocomplete: 'off', style: 'width:190px' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :address, t('offer.section.address'), class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.text_field :address, class: 'text_field form-control', placeholder: Offer.human_attribute_name('address') %>
+    </div>
+  </div>
+
+  <div class="switched by_locality" data-category="['suburb','village']">
+    <div class="form-group">
+      <%= f.label :direction, class: 'control-label col-md-4' %>
+      <div class="col-md-8">
+        <%= f.text_field :direction, class: 'text_field form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :distance, class: 'control-label col-md-4' %>
+      <div class="col-md-8">
+        <%= f.number_field :distance, class: 'number_field form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :railway_station, class: 'control-label col-md-4' %>
+      <div class="col-md-8">
+        <%= f.text_field :railway_station, class: 'text_field form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="metro_station_details">
+    <div class="form-group">
+      <%= f.label :metro_station_id, class: 'control-label col-md-4' %>
+      <div class="col-md-8">
+        <%= f.select :metro_station_id, options_for_metro_station_select(f.object.district_id, f.object.locality.try(:category), f.object.metro_station_id), { prompt: '' }, data: { placeholder: Offer.human_attribute_name('metro_station_id') }, autocomplete: 'off', style: 'width:190px' %>
+      </div>
+    </div>
+    <div class="form-group metro">
+      <%= f.label :metro_time_on_transport, class: 'control-label col-md-4' %>
+      <div class="col-md-8">
+        <%= f.number_field :metro_time_on_transport, class: 'text_field form-control' %>
+      </div>
+    </div>
+    <div class="form-group metro">
+      <%= f.label :metro_time_on_foot, class: 'control-label col-md-4' %>
+      <div class="col-md-8">
+        <%= f.number_field :metro_time_on_foot, class: 'text_field form-control' %>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['flat','house','room']">
+    <%= f.label :rooms, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.number_field :rooms, class: 'text_field form-control number' %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['flat','room']">
+    <%= f.label :area, class: 'control-label col-md-4' %>
+    <div class="col-md-1">
+      <%= f.number_field :area, class: 'text_field form-control number', placeholder: Offer.human_attribute_name('area_placeholder'), title: Offer.human_attribute_name('area') %>
+    </div>
+    <div class="col-md-1">
+      <%= f.number_field :living_space, class: 'text_field form-control number', placeholder: Offer.human_attribute_name('living_space_placeholder'), title: Offer.human_attribute_name('living_space') %>
+    </div>
+    <div class="col-md-1">
+      <%= f.number_field :kitchen_space, class: 'text_field form-control number', placeholder: Offer.human_attribute_name('kitchen_space_placeholder'), title: Offer.human_attribute_name('kitchen_space') %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['house','lot']">
+    <%= f.label :lot_area, class: 'control-label col-md-4' %>
+    <div class="col-md-1">
+      <%= f.number_field :lot_area, class: 'text_field form-control number' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.select :area_unit, [[t('offer.area_unit.acres'), 'acres'], [t('offer.area_unit.hectare'), 'hectare']] %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['house','lot']">
+    <%= f.label :lot_type, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.select :lot_type, [[t('offer.lot_type.individual_house_building'), 'individual_house_building'], [t('offer.lot_type.gardening'), 'gardening']] %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['room']">
+    <%= f.label :rooms_offered, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.number_field :rooms_offered, class: 'text_field form-control number' %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['room']">
+    <%= f.label :rooms_spaces, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.number_field :rooms_spaces, class: 'text_field form-control number' %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['house','office','garage']">
+    <%= f.label :area, class: 'control-label col-md-4' %>
+    <div class="col-md-1">
+      <%= f.number_field :area, class: 'text_field form-control number' %>
+    </div>
+    <div class="col-md-1" style="padding-top:5px;padding-left:25px;">
+      <%= t('m2_html').html_safe %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['flat','room','office']">
+    <%= f.label :floor_and_floors_total, class: 'control-label col-md-4' %>
+    <div class="col-md-1">
+      <%= f.number_field :floor, class: 'text_field form-control number' %>
+    </div>
+    <div class="col-md-1">
+      <%= f.number_field :floors_total, class: 'text_field form-control number' %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['house']">
+    <%= f.label :floors_total, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.number_field :floors_total, class: 'text_field form-control number' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.text_area :description, class: 'text_field form-control', cols: 100, rows: 10 %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['flat','room']">
+    <%= f.label :renovation, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.select :renovation, Offer::RENOVATIONS.map { |r| [t("offer.renovation.#{r}"), r] }, { prompt: '' }, data: { placeholder: Offer.human_attribute_name('renovation') }, style: 'width:160px;' %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['flat','room']">
+    <%= f.label :quality, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.select :quality, Offer::QUALITIES.map { |q| [t("offer.quality.#{q}"), q] }, { prompt: '' }, data: { placeholder: Offer.human_attribute_name('quality') }, style: 'width:160px;' %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['flat','room','house','office','garage']">
+    <%= f.label :building_type, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.select :building_type, Offer::BUILDING_TYPES.map { |r| [t("offer.building_type.#{r}"), r] }, { prompt: '' }, data: { placeholder: Offer.human_attribute_name('building_type') }, style: 'width:160px;' %>
+    </div>
+  </div>
+
+  <div class="form-group switched by_realty" data-realty="['flat','room']">
+    <%= f.label :bathroom_unit, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.select :bathroom_unit, Offer::BATHROOM_UNITS.map { |r| [t("offer.bathroom_unit.#{r}"), r] }, { prompt: '' }, data: { placeholder: Offer.human_attribute_name('bathroom_unit') }, style: 'width:160px;' %>
+    </div>
+  </div>
+
+  <h3><%= t('.contact_and_price') %></h3>
+
+  <div class="form-group">
+    <%= f.label :price, class: 'control-label col-md-4' %>
+    <div class="col-md-2">
+      <%= f.number_field :price, class: 'text_field form-control price_input' %>
+    </div>
+    <div class="col-md-2">
+      <%= f.select :price_currency, Offer::CURRENCIES.map { |r| [t("offer.price_currency.#{r}"), r] }, { prompt: '' }, data: { placeholder: Offer.human_attribute_name('price_currency') }, style: 'width:160px;' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :phone_first, class: 'control-label col-md-4' %>
+    <div class="col-md-8">
+      <%= f.text_field :phone_first, class: "form-control", placeholder: '+380987654321' %>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-8'>
+      <%= f.submit nil, class: 'btn btn-primary' %>
+      <%= link_to t('.cancel', default: t("helpers.links.cancel")),
+                  offers_path, class: 'btn btn-default' %>
+    </div>
+  </div>
+<% end %>
+<% content_for :head do %>
+  <%= javascript_tag "$(document).ready(function() { Offers.setupEditFormListener(); });" %>
+<% end %>

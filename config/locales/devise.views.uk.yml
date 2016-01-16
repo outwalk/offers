@@ -1,0 +1,84 @@
+uk:
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Вислати повторно листа з активацією"
+    mailer:
+      confirmation_instructions:
+        action: "Активувати"
+        greeting: "Ласкаво просимо, %{recipient}!"
+        instruction: "Ви можете підтвердити свою електронну пошту через посилання нижче:"
+      reset_password_instructions:
+        action: "Змінити пароль"
+        greeting: "Ласкаво просимо, %{recipient}!"
+        instruction: "Ви (або хтось ще) запросили зміну пароля. Для зміни пароля натисніть посилання нижче:"
+        instruction_2: "Якщо ви не запитували зміни пароля - проігноруйте, будь-ласка, це повідомлення."
+        instruction_3: "Ваш пароль не зміниться поки ви не натиснете на посилання і не введете новий."
+      unlock_instructions:
+        action: "Розблокувати обліковий запис"
+        greeting: "Доброго дня, %{recipient}!"
+        instruction: "Натисніть на посилання для активації облікового запису:"
+        message: "Ваш обліковий запис було заблоковано в зв'язку з перевищенням ліміту невдалих спроб входу."
+    passwords:
+      new:
+        forgot_your_password: "Забули пароль?"
+        send_me_reset_password_instructions: "Вислати новий пароль"
+      edit:
+        change_my_password: "Змінити мій пароль"
+        change_your_password: "Змінити пароль"
+        confirm_new_password: "Підтвердіть новий пароль"
+        new_password: "Новий пароль"
+    registrations:
+      edit:
+        are_you_sure: "Ви впевнені?"
+        cancel_my_account: "Видалити обліковий запис"
+        leave_blank_if_you_don_t_want_to_change_it: "залиште поле порожнім, якщо не хочете нічого міняти"
+        currently_waiting_confirmation_for_email: "Очікується підтвердження електронної пошти: %{email}"
+        title: "Редагувати обліковий запис"
+        we_need_your_current_password_to_confirm_your_changes: "введіть поточний пароль для підтвердження змін"
+        update: "Оновити"
+        unhappy: "Розчаровані"
+      new:
+        sign_up: "Реєстрація"
+        i_accept: "Я приймаю"
+    sessions:
+      new:
+        sign_in: "Ввійти"
+      current:
+        edit_registration: "Обліковий запис"
+        sign_out: "Вийти"
+    shared:
+      links:
+        back: "Назад"
+        didn_t_receive_confirmation_instructions: "Не отримали підтвердження?"
+        didn_t_receive_unlock_instructions: "Не одержали код розблокування?"
+        forgot_your_password: "Забули пароль?"
+        sign_in: "Ввійти"
+        sign_in_with_provider: "Увійти за допомогою %{provider}"
+        sign_up: "Реєстрація"
+    unlocks:
+      new:
+        resend_unlock_instructions: "Вислати підтвердження заново"
+  activerecord:
+    models:
+      user:
+        one: "Користувач"
+        few: "Користувачі"
+        many: "Користувачі"
+        other: "Користувачі"
+    attributes:
+      user:
+        current_password: "Поточний пароль"
+        email:
+        password: "Пароль"
+        password_confirmation: "Підтвердження пароля"
+        remember_me: "Запам'ятати мене"
+        name: "Ім'я та прізвище"
+        phone_first: "Перший номер телефону"
+        phone_second: "Другий номер телефону"
+        phone_third: "Третій номер телефону"
+        phone_fourth: "Четвертий номер телефону"
+        terms_of_service: "Умови користування сервісом"
+        subscribed: "Дозволити Email повідомлення"
+        slogan: "Слоган (інформаційний текст, що додається до всіх оголошень)"
+        confirmed_at: "Email підтверджений"

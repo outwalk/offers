@@ -1,0 +1,7 @@
+<h1><%= t('.title') %></h1>
+
+<ul>
+  <% @supports.each do |support| %>
+    <li><%= link_to support.title, support_path(support) %></li>
+  <% end %>
+</ul>

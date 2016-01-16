@@ -1,0 +1,7 @@
+ru:
+  locality:
+    categories:
+      city: 'город'
+      district: 'район'
+      suburb: 'пригород'
+      village: 'село'

@@ -1,0 +1,7 @@
+uk:
+  locality:
+    categories:
+      city: 'місто'
+      district: 'район'
+      suburb: 'передмістя'
+      village: 'село'

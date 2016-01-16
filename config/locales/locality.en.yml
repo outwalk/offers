@@ -1,0 +1,10 @@
+en:
+  locality:
+    categories:
+      city: 'city'
+      district: 'district'
+      suburb: 'suburb'
+      village: 'village'
+
+
+

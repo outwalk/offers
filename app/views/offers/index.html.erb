@@ -1,0 +1,13 @@
+<%= link_to t('.new', default: t("helpers.links.new")), new_offer_path, class: 'btn btn-primary' %>
+
+<%- model_class = Offer -%>
+<div class="page-header">
+  <h1><%=t '.title', default: model_class.model_name.human.pluralize.titleize %></h1>
+</div>
+<table class="table table-striped">
+  <%= render @offers %>
+</table>
+
+<div style="float:right;">
+  <%= paginate @offers, theme: 'twitter-bootstrap-3' %>
+</div>

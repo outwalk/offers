@@ -1,0 +1,23 @@
+uk:
+  helpers:
+    actions: "Дії"
+    links:
+      back: "Назад"
+      cancel: "Скасувати"
+      confirm: "Ви впевнені?"
+      destroy: "Видалити"
+      new: "Новий"
+      edit: "Редагувати"
+      show: "Показати"
+    titles:
+      edit: "Редагувати"
+      save: "Save"
+      new: "Новий"
+      delete: "Видалити"
+  views:
+    pagination:
+      first: 'Перша'
+      previous: 'Попередня'
+      truncate: '...'
+      next: 'Наступна'
+      last: 'Остання'

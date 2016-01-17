@@ -25,6 +25,6 @@ en:
       title: 'Support'
   layouts:
     application:
-      mailo_technical_support_html: "Technical support: <a href='mailto:Technical support<shhavel@gmail.com>'>shhavel@gmail.com</a>"
+      mailo_technical_support_html: "Technical support: <a href='mailto:Technical support<support@offers.kiev.ua>'>support@offers.kiev.ua</a>"
   m2_html: 'm<sup>2</sup>'
   sq_m: 'sq. m'

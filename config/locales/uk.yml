@@ -25,6 +25,6 @@ uk:
       title: 'Підтримка'
   layouts:
     application:
-      mailo_technical_support_html: "Технічна підтримка: <a href='mailto:Технічна підтримка<shhavel@gmail.com>'>shhavel@gmail.com</a>"
+      mailo_technical_support_html: "Технічна підтримка: <a href='mailto:Технічна підтримка<support@offers.kiev.ua>'>support@offers.kiev.ua</a>"
   m2_html: 'м<sup>2</sup>'
   sq_m: 'кв. м'

@@ -25,7 +25,7 @@ ru:
       title: 'Поддержка'
   layouts:
     application:
-      mailo_technical_support_html: "Техническая поддержка: <a href='mailto:Техническая поддержка<shhavel@gmail.com>'>shhavel@gmail.com</a>"
+      mailo_technical_support_html: "Техническая поддержка: <a href='mailto:Техническая поддержка<support@offers.kiev.ua>'>support@offers.kiev.ua</a>"
   m2_html: 'м<sup>2</sup>'
   sq_m: 'кв. м'
   activerecord:

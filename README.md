@@ -61,6 +61,13 @@ rspec spec
 
 ## Deployment instructions
 
+Check authentication agent keys and add key `~/.ssh/id_rsa`
+
+```shell
+ssh-add -l
+eval `ssh-agent` 1> /dev/null; ssh-add ~/.ssh/id_rsa 2> /dev/null
+```
+
 Deploy master branch to production
 
 ```shell

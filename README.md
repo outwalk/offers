@@ -61,16 +61,23 @@ rspec spec
 
 ## Deployment instructions
 
+Check authentication agent keys and add key `~/.ssh/id_rsa`
+
+```shell
+ssh-add -l
+eval `ssh-agent` 1> /dev/null; ssh-add ~/.ssh/id_rsa 2> /dev/null
+```
+
+Deploy specific branch to staging
+
+```shell
+BRANCH=feature/new_feature_name cap staging deploy
+```
+
 Deploy master branch to production
 
 ```shell
 cap production deploy
-```
-
-Deploy specific branch to production
-
-```shell
-BRANCH=feature/new_feature_name cap production deploy
 ```
 
 ## Production Server
@@ -84,13 +91,15 @@ ssh deploy@alav.chost.com.ua
 Rails console
 
 ```shell
-cd /var/www/alav/data/www/offers.kiev.ua && RAILS_ENV=production bundle exec rails c
+cd /var/www/alav/data/www/staging.offers.kiev.ua/current && RAILS_ENV=staging bundle exec rails c
+cd /var/www/alav/data/www/offers.kiev.ua/current && RAILS_ENV=production bundle exec rails c
 ```
 
 Database access
 
 ```shell
-cd /var/www/alav/data/www/offers.kiev.ua && RAILS_ENV=production bundle exec rails db -p
+cd /var/www/alav/data/www/staging.offers.kiev.ua/current && RAILS_ENV=staging bundle exec rails db -p
+cd /var/www/alav/data/www/offers.kiev.ua/current && RAILS_ENV=production bundle exec rails db -p
 ```
 
 Configure Apache Server

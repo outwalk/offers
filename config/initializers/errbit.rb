@@ -5,5 +5,5 @@ Airbrake.configure do |config|
   config.root_directory = Rails.root
   config.logger = Rails.logger
   config.environment = Rails.env
-  config.ignore_environments = [:test]
+  config.ignore_environments = [:test, :development]
 end

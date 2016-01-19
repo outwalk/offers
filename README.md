@@ -1,5 +1,4 @@
-# Offers
-[![Build Status](https://travis-ci.org/outwalk/offers.svg?branch=master)](https://travis-ci.org/outwalk/offers)
+# Offers [![Build Status](https://travis-ci.org/outwalk/offers.svg?branch=master)](https://travis-ci.org/outwalk/offers)
 [![Coverage Status](https://coveralls.io/repos/github/outwalk/offers/badge.svg?branch=master)](https://coveralls.io/github/outwalk/offers?branch=master)
 
 Advertisements for the sale and lease of real estate [http://offers.kiev.ua](http://offers.kiev.ua). Make the real estate market better.

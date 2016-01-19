@@ -48,10 +48,11 @@ group :test do
   gem 'capybara'
   gem 'watir-webdriver'
   gem 'database_cleaner'
+  gem 'webmock'
   gem 'headless', require: false
   gem 'shoulda-matchers', require: false
   gem 'simplecov', require: false
-  gem 'webmock'
+  gem 'coveralls', require: false
 end
 
 # gem 'unicorn', group: :production # Use Unicorn as the app server

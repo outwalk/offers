@@ -1,6 +1,8 @@
 language: ruby
 rvm:
   - 2.0.0
+env:
+  - RCOV=true
 services:
   - mysql
 before_script:

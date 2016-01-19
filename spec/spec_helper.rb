@@ -1,6 +1,11 @@
 ENV['RAILS_ENV'] ||= 'test'
 if ENV['RCOV'].to_s.downcase == 'true'
   require 'simplecov'
+  require 'coveralls'
+  SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+    SimpleCov::Formatter::HTMLFormatter,
+    Coveralls::SimpleCov::Formatter
+  ]
   SimpleCov.start 'rails'
 end
 require File.expand_path('../../config/environment', __FILE__)

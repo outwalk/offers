@@ -18,6 +18,7 @@ ActiveAdmin.register Article do
     actions
   end
 
+  filter :id
   filter :category
   filter :section
   filter :title

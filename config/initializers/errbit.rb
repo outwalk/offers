@@ -7,3 +7,23 @@ Airbrake.configure do |config|
   config.environment = Rails.env
   config.ignore_environments = [:test, :development]
 end
+
+module Airbrake
+  IGNORE_ONLY = %w(
+    AbstractController::ActionNotFound
+    ActiveRecord::RecordNotFound
+    ActionController::RoutingError
+    ActionController::InvalidAuthenticityToken
+    ActionController::UnknownAction
+    ActionController::UnknownHttpMethod
+    CGI::Session::CookieStore::TamperedWithCookie
+    Mongoid::Errors::DocumentNotFound
+    ActionController::UnknownFormat
+  )
+end
+
+Airbrake.add_filter do |notice|
+  if notice[:errors].any? { |error| error[:type].in? ::Airbrake::IGNORE_ONLY }
+    notice.ignore!
+  end
+end

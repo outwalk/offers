@@ -32,3 +32,7 @@ ru:
     errors:
       messages:
         present: 'должно быть пустым'
+  lang:
+    facebook: ru_RU
+    google: ru
+    twitter: ru

@@ -10,5 +10,11 @@ describe Parsers::Hromadske do
       expect(Article.count).to eq 20
       expect(article_ids).to match_array Article.pluck(:id)
     end
+
+    it 'does not parse duplicate articles from www.hromadske.tv' do
+      subject.parse_articles
+      subject.parse_articles
+      expect(Article.count).to eq 20
+    end
   end
 end

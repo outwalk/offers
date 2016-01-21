@@ -10,5 +10,11 @@ describe Parsers::Oilprice do
       expect(Article.count).to eq 16
       expect(article_ids).to match_array Article.pluck(:id)
     end
+
+    it 'does not parse duplicate articles from oilprice.com' do
+      subject.parse_articles
+      subject.parse_articles
+      expect(Article.count).to eq 16
+    end
   end
 end

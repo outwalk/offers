@@ -10,7 +10,7 @@ module Parsers
       main_page = Nokogiri::HTML(open('http://oilprice.com'))
       main_page.css('ul.clear a').group_by { |a| a['href'] }.map { |as| as.last.first }.map do |a|
         source = a['href']
-        next if Article.where(source: source).exists?
+        next if Article.where(source_url: source).exists?
 
         category, section = source.sub('http://oilprice.com/', '').
           split('/', 3)[0..-2].map { |s| s.gsub(/[^\w\-]/, '').gsub('-', ' ') }

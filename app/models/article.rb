@@ -47,6 +47,7 @@ class Article < ActiveRecord::Base
 
   # Validations: presence > by type > validates
   validates :language, :category, :title, :body, presence: true
+  validates :source_url, uniqueness: { scope: :language }, allow_nil: true, allow_blank: true
 
   # Other properties (e.g. accepts_nested_attributes_for)
   paginates_per 25
@@ -79,6 +80,7 @@ class Article < ActiveRecord::Base
     translations.create(
       language: to,
       source: source,
+      source_url: source_url,
       category: DICTIONARY[language][to][category] || translate(category, language, to),
       section: DICTIONARY[language][to][section] || translate(section, language, to),
       title: translate(title, language, to),

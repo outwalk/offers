@@ -11,7 +11,7 @@ module Parsers
     def self.parse_articles
       index_doc = Nokogiri::HTML(open('http://www.hromadske.tv/ajax/type_newsline/action_allline/'))
       index_doc.css('span.content-block > a').map { |a| a['href'] }.map do |href|
-        next if Article.where(source: href).exists?
+        next if Article.where(source_url: href).exists?
         category, slug = href.sub('http://www.hromadske.tv/', '').sub(/\/$/, '').split('/', 2)
         category.capitalize!
         category = TranslateHelper::DICTIONARY['en']['uk'][category] || translate(category, 'en', 'uk')

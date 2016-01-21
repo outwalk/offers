@@ -46,6 +46,7 @@ describe Article do
     it { is_expected.to validate_presence_of :category }
     it { is_expected.to validate_presence_of :title }
     it { is_expected.to validate_presence_of :body }
+    it { is_expected.to validate_uniqueness_of(:source_url).scoped_to(:language) }
   end
 
   describe '.category_exists?' do

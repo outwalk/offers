@@ -28,3 +28,7 @@ en:
       mailo_technical_support_html: "Technical support: <a href='mailto:Technical support<support@offers.kiev.ua>'>support@offers.kiev.ua</a>"
   m2_html: 'm<sup>2</sup>'
   sq_m: 'sq. m'
+  lang:
+    facebook: en_GB
+    google: en-GB
+    twitter: en-gb

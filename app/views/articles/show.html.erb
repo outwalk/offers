@@ -1,3 +1,5 @@
+<% content_for :title, @article.title %>
+
 <%= render_breadcrumbs do |breadcrumbs| %>
   <%= content_tag(:div, breadcrumbs, class: "container") %>
 <% end %>
@@ -39,3 +41,5 @@
     <%= link_to @article.source_url, @article.source_url, target: '_blank' %></i>
   <% end %>
 </p>
+
+<%= render 'shared/social_sharing' %>

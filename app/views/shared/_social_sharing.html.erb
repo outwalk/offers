@@ -1,0 +1,26 @@
+<script type="text/javascript">var bindFacebookEvents,initializeFacebookSDK,loadFacebookSDK,restoreFacebookRoot,saveFacebookRoot;$(function(){return loadFacebookSDK(),window.fbEventsBound?void 0:bindFacebookEvents()}),bindFacebookEvents=function(){return $(document).on("page:fetch",saveFacebookRoot).on("page:change",restoreFacebookRoot).on("page:load",function(){return"undefined"!=typeof FB&&null!==FB?FB.XFBML.parse():void 0}),this.fbEventsBound=!0},saveFacebookRoot=function(){return $("#fb-root").length?this.fbRoot=$("#fb-root").detach():void 0},restoreFacebookRoot=function(){return null!=this.fbRoot?$("#fb-root").length?$("#fb-root").replaceWith(this.fbRoot):$("body").append(this.fbRoot):void 0},loadFacebookSDK=function(){return window.fbAsyncInit=initializeFacebookSDK,$.getScript("//connect.facebook.net/<%= t('lang.facebook') %>/sdk.js")},initializeFacebookSDK=function(){return FB.init({appId:"830037347118382",xfbml:!0,version:"v2.5"})};</script>
+
+<div class="twitter-share-wrapper">
+  <a href="https://twitter.com/share" class="twitter-share-button"{count} data-lang="<%= t('lang.twitter') %>" data-size="large" data-dnt="true">Tweet</a>
+  &nbsp;
+  <!-- Place this tag where you want the +1 button to render. -->
+  <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+</div>
+
+<div class="fb-like-wrapper">
+  <div class="fb-like" data-share="true" data-width="450" data-show-faces="false"></div>
+</div>
+
+<!-- Twitter LIKE -->
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs'); $(document).on('page:load', function(){if(typeof twttr!=="undefined"&&twttr!==null){twttr.widgets.load()}});</script>
+
+<!-- Place this tag after the last +1 button tag. -->
+<script type="text/javascript">
+  window.___gcfg = {lang: '<%= t("lang.google") %>'};
+
+  (function() {
+    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+    po.src = 'https://apis.google.com/js/platform.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+  })();
+</script>

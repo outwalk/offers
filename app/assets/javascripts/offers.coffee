@@ -52,7 +52,6 @@ window.Offers =
 
     if $("#offer_district_id").find(":selected").val() in ["7", "10", "11"] && $("#offer_locality_id").find(":selected").data('category') == 'district'
       $(".metro_station_details").fadeIn('slow')
-      console.log('TEST')
 
     $(".edit_offer").submit ->
       $(".switched").find(":hidden").each (i, obj) ->
